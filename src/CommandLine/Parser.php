@@ -153,8 +153,8 @@ class Parser
         $this->argument_values = $argv;
 
         if(
-                $this->argument_count <= 1 ||
-                in_array("--help", $this->argument_values)
+            $this->argument_count <= 1 ||
+            in_array("--help", $this->argument_values)
         )
         {
             $this->PrintHelp();

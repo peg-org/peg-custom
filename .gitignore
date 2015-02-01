@@ -8,3 +8,7 @@ composer.lock
 
 # documentation files
 /docs/api
+/nbproject
+
+# Testing directory to generate extensions
+/test_extension
