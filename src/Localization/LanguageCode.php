@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Localization;
+namespace Peg\Custom\Localization;
 
 /**
  * Defines a class that serves as enumeration of the different language codes

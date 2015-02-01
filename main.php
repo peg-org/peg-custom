@@ -2,11 +2,11 @@
 /**
  * Basic cli implementation used for testing and development of the library. 
  * If your are planning to use peg please use http://github.com/peg-org/peg-cli 
- * which is the official and full featured cli interface of the project.
+ * which is the official and fully featured cli interface of the project.
  *
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
 // Set the path to peg files by using environment variables if available,
@@ -42,15 +42,15 @@ if(!file_exists(PEG_SKELETON_PATH))
     throw new Exception("Peg skeleton files path not found.");
 
 // Register class auto-loader
-function peg_autoloader($class_name)
+function peg_custom_autoloader($class_name)
 {
     $file = str_replace("\\", "/", $class_name) . ".php";
-    $file = str_replace("Peg/Lib/", "", $file);
+    $file = str_replace("Peg/Custom/", "", $file);
 
     include(PEG_LIBRARY_PATH . "src/" . $file);
 }
 
-spl_autoload_register("peg_autoloader");
+spl_autoload_register("peg_custom_autoloader");
 
 // Register global function for translating and to facilitate automatic
 // generation of po files.
@@ -60,7 +60,7 @@ function t($text)
 
     if(!$language_object)
     {
-        $language_object = new Peg\Lib\Localization\Language(PEG_LOCALE_PATH);
+        $language_object = new Peg\Custom\Localization\Language(PEG_LOCALE_PATH);
     }
 
     return $language_object->Translate($text);
@@ -70,10 +70,10 @@ function t($text)
 date_default_timezone_set("UTC");
 
 // Initialize the application
-Peg\Lib\Application::Initialize();
+Peg\Custom\Application::Initialize();
 
 // Retrieve a reference of main command line parser
-$parser = Peg\Lib\Application::GetCLIParser();
+$parser = Peg\Custom\Application::GetCLIParser();
 
 // Start the command line parser
 $parser->Start($argc, $argv);

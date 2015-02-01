@@ -2,20 +2,20 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command\Action;
+namespace Peg\Custom\Command\Action;
 
-use Peg\Lib\Application;
+use Peg\Custom\Application;
 
 /**
  * Action taken when help is called.
  */
-class Help extends \Peg\Lib\CommandLine\Action
+class Help extends \Peg\Custom\CommandLine\Action
 {
 
-    public function OnCall(\Peg\Lib\CommandLine\Command $command)
+    public function OnCall(\Peg\Custom\CommandLine\Command $command)
     {
         if(strlen($command->value) > 0)
         {
@@ -25,7 +25,7 @@ class Help extends \Peg\Lib\CommandLine\Action
             }
             else
             {
-                \Peg\Lib\CommandLine\Error::Show(t("Invalid command supplied."));
+                \Peg\Custom\CommandLine\Error::Show(t("Invalid command supplied."));
             }
         }
         else
@@ -36,9 +36,9 @@ class Help extends \Peg\Lib\CommandLine\Action
 
     /**
      * Prints help for a specific command.
-     * $param \Peg\Lib\CommandLine\Command $command
+     * $param \Peg\Custom\CommandLine\Command $command
      */
-    public function PrintHelp(\Peg\Lib\CommandLine\Command $command)
+    public function PrintHelp(\Peg\Custom\CommandLine\Command $command)
     {
         // Store the lenght of longest command name
         $max_command_len = 0;

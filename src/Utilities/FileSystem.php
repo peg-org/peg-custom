@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Utilities;
+namespace Peg\Custom\Utilities;
 
 /**
  * Function to manage files and directories

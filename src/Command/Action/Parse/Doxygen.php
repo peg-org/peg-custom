@@ -2,19 +2,16 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command\Action\Parse;
-
-use Peg\Lib\Parse\DefinitionsType;
-use Peg\Lib\Application;
+namespace Peg\Custom\Command\Action\Parse;
 
 /**
  * Implements a doxygen definitions parser action using \Peg\Lib\Lexers\Doxygen.
  * @see \Peg\Lib\Lexers\Doxygen
  */
-class Doxygen extends \Peg\Lib\Command\Action\Parse\Base
+class Doxygen extends \Peg\Custom\Command\Action\Parse\Base
 {
 
     /**

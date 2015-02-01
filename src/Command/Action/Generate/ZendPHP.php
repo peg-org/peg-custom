@@ -2,18 +2,18 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command\Action\Generate;
+namespace Peg\Custom\Command\Action\Generate;
 
-use Peg\Lib\Application;
+use Peg\Custom\Application;
 
 /**
  * Implements a zendphp engine generator action using \Peg\Lib\Generator\ZendPHP.
  * @see \Peg\Lib\Generator\ZendPHP
  */
-class ZendPHP extends \Peg\Lib\Command\Action\Generate\Base
+class ZendPHP extends \Peg\Custom\Command\Action\Generate\Base
 {
     
     /**

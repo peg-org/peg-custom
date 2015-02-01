@@ -2,18 +2,18 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command;
+namespace Peg\Custom\Command;
 
-use Peg\Lib\CommandLine\Option;
-use Peg\Lib\CommandLine\OptionType;
+use Peg\Custom\CommandLine\Option;
+use Peg\Custom\CommandLine\OptionType;
 
 /**
  * Command to generate the extension source code from the cached definition files.
  */
-class Generate extends \Peg\Lib\CommandLine\Command
+class Generate extends \Peg\Custom\CommandLine\Command
 {
 
     public function __construct()
@@ -22,7 +22,7 @@ class Generate extends \Peg\Lib\CommandLine\Command
 
         $this->description = t("Generates the extension source code and configuration files.");
 
-        $this->RegisterAction(new \Peg\Lib\Command\Action\Generate\ZendPHP);
+        $this->RegisterAction(new \Peg\Custom\Command\Action\Generate\ZendPHP);
         
         $format = new Option(array(
             "long_name"     => "format",

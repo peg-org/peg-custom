@@ -2,24 +2,24 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command\Action\Parse;
+namespace Peg\Custom\Command\Action\Parse;
 
-use Peg\Lib\Application;
-use Peg\Lib\CommandLine\Error;
-use Peg\Lib\Utilities\FileSystem;
+use Peg\Custom\Application;
+use Peg\Custom\CommandLine\Error;
+use Peg\Custom\Utilities\FileSystem;
 
 /**
  * Declares the base for a parse action that extract and generates definition
  * files.
  */
-abstract class Base extends \Peg\Lib\CommandLine\Action
+abstract class Base extends \Peg\Custom\CommandLine\Action
 {
     /**
      * Reference to command that called this action.
-     * @var \Peg\Lib\CommandLine\Command
+     * @var \Peg\Custom\CommandLine\Command
      */
     protected $command;
     
@@ -66,9 +66,9 @@ abstract class Base extends \Peg\Lib\CommandLine\Action
 
     /**
      * You shouldn't override this method, instead write a Start() implementation.
-     * @param \Peg\Lib\CommandLine\Command $command
+     * @param \Peg\Custom\CommandLine\Command $command
      */
-    public function OnCall(\Peg\Lib\CommandLine\Command $command)
+    public function OnCall(\Peg\Custom\CommandLine\Command $command)
     {
         if(!Application::ValidExtension())
             Error::Show(t("The current directory is not a valid peg managed extension."));

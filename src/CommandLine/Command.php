@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\CommandLine;
+namespace Peg\Custom\CommandLine;
 
 /**
  * A sub command processed by the application. Example peg init
@@ -27,7 +27,7 @@ class Command
 
     /**
      * Array of Options processed by the command.
-     * @var \Peg\Lib\CommandLine\Option[]
+     * @var \Peg\Custom\CommandLine\Option[]
      */
     public $options;
 
@@ -46,15 +46,15 @@ class Command
 
     /**
      * Array of Actions called if this command gets executed.
-     * @var \Peg\Lib\CommandLine\Action[]
+     * @var \Peg\Custom\CommandLine\Action[]
      */
     public $actions;
 
     /**
      * Initialize the command.
      * @param string $name Name of the Sub-command
-     * @param \Peg\Lib\CommandLine\Option[] $options List of options
-     * @param \Peg\Lib\CommandLine\Action[] $actions List of actions
+     * @param \Peg\Custom\CommandLine\Option[] $options List of options
+     * @param \Peg\Custom\CommandLine\Action[] $actions List of actions
      */
     public function __construct($name, $options = array(), $actions = array())
     {
@@ -67,7 +67,7 @@ class Command
 
     /**
      * Define a new option accepted by the command.
-     * @param \Peg\Lib\CommandLine\Option $option
+     * @param \Peg\Custom\CommandLine\Option $option
      */
     public function AddOption(Option $option)
     {
@@ -77,7 +77,7 @@ class Command
     /**
      * Gets an option by its long or short name.
      * @param type $name
-     * @return null|\Peg\Lib\CommandLine\Option
+     * @return null|\Peg\Custom\CommandLine\Option
      */
     public function GetOption($name)
     {
@@ -105,7 +105,7 @@ class Command
 
     /**
      * Register actions that get call when command is executed.
-     * @param \Peg\Lib\CommandLine\Action $action
+     * @param \Peg\Custom\CommandLine\Action $action
      */
     public function RegisterAction(Action $action)
     {

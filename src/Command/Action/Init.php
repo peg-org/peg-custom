@@ -2,23 +2,23 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command\Action;
+namespace Peg\Custom\Command\Action;
 
-use Peg\Lib\Settings;
-use Peg\Lib\Application;
-use Peg\Lib\CommandLine\Error;
-use Peg\Lib\Utilities\FileSystem;
+use Peg\Custom\Settings;
+use Peg\Custom\Application;
+use Peg\Custom\CommandLine\Error;
+use Peg\Custom\Utilities\FileSystem;
 
 /**
  * Action taken if the init command was executed.
  */
-class Init extends \Peg\Lib\CommandLine\Action
+class Init extends \Peg\Custom\CommandLine\Action
 {
 
-    public function OnCall(\Peg\Lib\CommandLine\Command $command)
+    public function OnCall(\Peg\Custom\CommandLine\Command $command)
     {
         // Get option values
         $authors = $command->GetOption("authors")->GetValue();
@@ -56,12 +56,12 @@ class Init extends \Peg\Lib\CommandLine\Action
         // Create configuration file
         if($config_type == "json")
         {
-            Settings::SetBackEnd(new \Peg\Lib\Config\JSON);
+            Settings::SetBackEnd(new \Peg\Custom\Config\JSON);
             Settings::Load($extension_dir, "peg.json");
         }
         else
         {
-            Settings::SetBackEnd(new \Peg\Lib\Config\INI);
+            Settings::SetBackEnd(new \Peg\Custom\Config\INI);
             Settings::Load($extension_dir, "peg.conf");
         }
 

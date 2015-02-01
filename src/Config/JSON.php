@@ -2,15 +2,15 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Config;
+namespace Peg\Custom\Config;
 
 /**
  * Json implementation to manage configuration files.
  */
-class JSON extends \Peg\Lib\Config\Base
+class JSON extends \Peg\Custom\Config\Base
 {
 
     /**
@@ -29,7 +29,7 @@ class JSON extends \Peg\Lib\Config\Base
 
         if(file_exists($this->file))
         {
-            $this->preferences = \Peg\Lib\Utilities\Json::Decode(
+            $this->preferences = \Peg\Custom\Utilities\Json::Decode(
                 file_get_contents($this->file)
             );
         }
@@ -42,7 +42,7 @@ class JSON extends \Peg\Lib\Config\Base
     {
         file_put_contents(
             $this->file, 
-            \Peg\Lib\Utilities\Json::Encode($this->preferences)
+            \Peg\Custom\Utilities\Json::Encode($this->preferences)
         );
     }
 

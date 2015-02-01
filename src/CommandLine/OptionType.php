@@ -2,13 +2,13 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\CommandLine;
+namespace Peg\Custom\CommandLine;
 
 /**
- * Enumeration used to declare a \Peg\Lib\CommandLine\Option type
+ * Enumeration used to declare a \Peg\Custom\CommandLine\Option type
  */
 class OptionType
 {

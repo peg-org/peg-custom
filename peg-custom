@@ -1,0 +1,10 @@
+#!/bin/bash
+# Sample shell script to execute the cli application
+
+MAIN_PATH="."
+
+#PEG_SKELETON_PATH="${MAIN_PATH}/vendor/peg-org/peg-src/skeleton" \
+#PEG_LIBRARY_PATH="${MAIN_PATH}/" \
+#PEG_LOCALE_PATH="${MAIN_PATH}/locale" \
+
+php $MAIN_PATH/main.php $@

@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib;
+namespace Peg\Custom;
 
 /**
  * Holds global options and objects.
@@ -15,7 +15,7 @@ class Application
 
     /**
      * Reference to the global parser.
-     * @var \Peg\Lib\CommandLine\Parser
+     * @var \Peg\Custom\CommandLine\Parser
      */
     private static $cli_parser;
 
@@ -27,25 +27,25 @@ class Application
 
     /**
      * Reference to the help command.
-     * @var \Peg\Lib\Command\Help
+     * @var \Peg\Custom\Command\Help
      */
     private static $help_command;
 
     /**
      * Reference to the init command.
-     * @var \Peg\Lib\Command\Init
+     * @var \Peg\Custom\Command\Init
      */
     private static $init_command;
 
     /**
      * Reference to the parse command.
-     * @var \Peg\Lib\Command\Parse
+     * @var \Peg\Custom\Command\Parse
      */
     private static $parse_command;
 
     /**
      * Reference to the generate command.
-     * @var \Peg\Lib\Command\Generate
+     * @var \Peg\Custom\Command\Generate
      */
     private static $generate_command;
 
@@ -67,9 +67,9 @@ class Application
         self::$cli_parser = new CommandLine\Parser;
 
         // Set Application details
-        self::$cli_parser->application_name = "peg";
+        self::$cli_parser->application_name = "peg-custom";
         self::$cli_parser->application_version = "1.0";
-        self::$cli_parser->application_description = t("PHP Extension Generator (http://github.com/peg-org/peg-src)");
+        self::$cli_parser->application_description = t("PHP Extension Generator (http://github.com/peg-org/peg-custom)");
 
         // Create commands
         self::$help_command = new Command\Help;
@@ -84,7 +84,7 @@ class Application
         self::$cli_parser->RegisterCommand(self::$generate_command);
 
         // Initialize the plugin loader and try to load any plugins.
-        self::$plugin_loader = new Plugins\Loader();
+        self::$plugin_loader = new \Peg\Lib\Plugins\Loader();
 
         if(self::ValidExtension())
         {
@@ -150,7 +150,7 @@ class Application
 
     /**
      * Gets the global command line parser.
-     * @return \Peg\Lib\CommandLine\Parser
+     * @return \Peg\Custom\CommandLine\Parser
      */
     public static function &GetCLIParser()
     {
@@ -159,7 +159,7 @@ class Application
 
     /**
      * Gets a reference to init command currently used by peg.
-     * @return \Peg\Lib\Command\Init
+     * @return \Peg\Custom\Command\Init
      */
     public static function &GetInitCommand()
     {
@@ -168,7 +168,7 @@ class Application
 
     /**
      * Gets a reference to help command currently used by peg.
-     * @return \Peg\Lib\Command\Help
+     * @return \Peg\Custom\Command\Help
      */
     public static function &GetHelpCommand()
     {
@@ -177,7 +177,7 @@ class Application
 
     /**
      * Gets a reference to parse command currently used by peg.
-     * @return \Peg\Lib\Command\Parse
+     * @return \Peg\Custom\Command\Parse
      */
     public static function &GetParseCommand()
     {
@@ -186,7 +186,7 @@ class Application
 
     /**
      * Gets a reference to generate command currently used by peg.
-     * @return \Peg\Lib\Command\Parse
+     * @return \Peg\Custom\Command\Parse
      */
     public static function &GetGenerateCommand()
     {

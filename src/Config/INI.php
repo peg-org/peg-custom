@@ -2,15 +2,15 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Config;
+namespace Peg\Custom\Config;
 
 /**
  * Ini implementation to manage configuration files.
  */
-class INI extends \Peg\Lib\Config\Base
+class INI extends \Peg\Custom\Config\Base
 {
 
     /**

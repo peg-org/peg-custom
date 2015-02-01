@@ -6,8 +6,7 @@ composer.phar
 # Ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 composer.lock
 
-# documentation files
-/docs/api
+# project files
 /nbproject
 
 # Testing directory to generate extensions

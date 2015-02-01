@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Config;
+namespace Peg\Custom\Config;
 
 /**
  * Base structure for managing configuration files. Every configuration manager

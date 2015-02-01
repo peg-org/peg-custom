@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Localization;
+namespace Peg\Custom\Localization;
 
 /**
  * Defines the language class used for translating system strings by using
@@ -15,7 +15,7 @@ class Language
 {
 
     /**
-     * One of the language codes from \Localization\LanguageCode
+     * One of the language codes from \Peg\Custom\Localization\LanguageCode
      * @var string
      */
     private $language;
@@ -35,8 +35,8 @@ class Language
     /**
      * Initialize the language class for translating strings.
      * @param string $directory Path to directory that holds po files.
-     * @param string $language The language code from \Localization\LanguageCode
-     * @throws Exception If language directory doesn't exists.
+     * @param string $language The language code from \Peg\Custom\Localization\LanguageCode
+     * @throws \Exception If language directory doesn't exists.
      */
     public function __construct($directory, $language = null)
     {
@@ -52,7 +52,7 @@ class Language
 
     /**
      * Current language used for translation output.
-     * @return string One of the values from \Localization\LanguageCode
+     * @return string One of the values from \Peg\Custom\Localization\LanguageCode
      */
     public function GetLanguage()
     {
@@ -62,7 +62,7 @@ class Language
     /**
      * Gets the current system language.
      * @todo Implement also for microsoft windows.
-     * @return string One of the values from \Localization\LanguageCode
+     * @return string One of the values from \Peg\Custom\Localization\LanguageCode
      */
     public function GetSystemLangauge()
     {
@@ -74,7 +74,7 @@ class Language
     /**
      * Assings the language for translation output. If no language is given
      * the system one is assigned.
-     * @param string $language One of the values from \Localization\LanguageCode
+     * @param string $language One of the values from \Peg\Custom\Localization\LanguageCode
      */
     public function SetLanguage($language = null)
     {

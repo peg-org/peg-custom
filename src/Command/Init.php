@@ -2,18 +2,18 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command;
+namespace Peg\Custom\Command;
 
-use Peg\Lib\CommandLine\Option;
-use Peg\Lib\CommandLine\OptionType;
+use Peg\Custom\CommandLine\Option;
+use Peg\Custom\CommandLine\OptionType;
 
 /**
  * In charge of initializing a directory to produce an extension.
  */
-class Init extends \Peg\Lib\CommandLine\Command
+class Init extends \Peg\Custom\CommandLine\Command
 {
 
     public function __construct()

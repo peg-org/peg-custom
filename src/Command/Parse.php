@@ -2,18 +2,18 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command;
+namespace Peg\Custom\Command;
 
-use Peg\Lib\CommandLine\Option;
-use Peg\Lib\CommandLine\OptionType;
+use Peg\Custom\CommandLine\Option;
+use Peg\Custom\CommandLine\OptionType;
 
 /**
  * Command to parse files and generate a definitions cache representing them.
  */
-class Parse extends \Peg\Lib\CommandLine\Command
+class Parse extends \Peg\Custom\CommandLine\Command
 {
 
     public function __construct()

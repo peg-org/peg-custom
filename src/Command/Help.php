@@ -2,17 +2,17 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\Command;
+namespace Peg\Custom\Command;
 
-use Peg\Lib\Application;
+use Peg\Custom\Application;
 
 /**
  * Display overall help or for a given command.
  */
-class Help extends \Peg\Lib\CommandLine\Command
+class Help extends \Peg\Custom\CommandLine\Command
 {
 
     public function __construct()

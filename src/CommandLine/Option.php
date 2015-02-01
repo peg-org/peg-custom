@@ -2,10 +2,10 @@
 /**
  * @author Jefferson González
  * @license MIT
- * @link http://github.com/peg-org/peg-src Source code.
+ * @link http://github.com/peg-org/peg-custom Source code.
  */
 
-namespace Peg\Lib\CommandLine;
+namespace Peg\Custom\CommandLine;
 
 /**
  * Represents a command line option.
@@ -29,7 +29,7 @@ class Option
 
     /**
      * Data type of the option represented by one of the constants from
-     * \Peg\Lib\CommandLine\OptionType
+     * \Peg\Custom\CommandLine\OptionType
      * @var integer
      */
     public $type;
