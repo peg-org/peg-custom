@@ -8,12 +8,13 @@
             "email": "auroraeosrose@gmail.com"
         },
         {
-            "name": "Jefferson González"
+            "name": "Jefferson González",
+            "email": "jgmdev@gmail.com"
         },
-		{
-			"name": "Patrick Andersen",
-			"email": "patrick@emsmith.net"
-		}
+        {
+            "name": "Patrick Andersen",
+            "email": "patrick@emsmith.net"
+        }
 
     ],
     "require": {
