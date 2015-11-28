@@ -22,32 +22,32 @@ class Generate extends \Peg\Custom\CommandLine\Command
 
         $this->description = t("Generates the extension source code and configuration files.");
 
-        $this->RegisterAction(new \Peg\Custom\Command\Action\Generate\ZendPHP);
-        
+        $this->RegisterAction(new \Peg\Custom\Command\Action\Generate\ZendPHP5);
+
         $format = new Option(array(
             "long_name"     => "format",
             "short_name"    => "f",
             "type"          => OptionType::STRING,
             "required"      => false,
-            "description"   => t("Format of cached definition files. Default: json") 
+            "description"   => t("Format of cached definition files. Default: json")
                 . "\n" . t("Allowed values:") . " json, php",
             "default_value" => "json"
         ));
-        
+
         $this->AddOption($format);
-        
+
         $engine = new Option(array(
             "long_name"     => "engine",
             "short_name"    => "e",
             "type"          => OptionType::STRING,
             "required"      => false,
-            "description"   => t("The php engine to generate source code for. Default: zendphp") 
-                . "\n" . t("Allowed values:") . " zendphp",
-            "default_value" => "zendphp"
+            "description"   => t("The php engine to generate source code for. Default: zendphp5")
+                . "\n" . t("Allowed values:") . " zendphp5",
+            "default_value" => "zendphp5"
         ));
-        
+
         $this->AddOption($engine);
-        
+
         $verbose = new Option(array(
             "long_name"     => "verbose",
             "short_name"    => "v",
