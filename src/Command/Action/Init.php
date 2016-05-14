@@ -7,10 +7,10 @@
 
 namespace Peg\Custom\Command\Action;
 
-use Peg\Custom\Settings;
+use Peg\Lib\Settings;
+use Peg\Lib\Utilities\FileSystem;
 use Peg\Custom\Application;
 use Peg\Custom\CommandLine\Error;
-use Peg\Custom\Utilities\FileSystem;
 
 /**
  * Action taken if the init command was executed.
@@ -52,16 +52,16 @@ class Init extends \Peg\Custom\CommandLine\Action
             if(count($files) > 0)
                 Error::Show(t("The directory you are trying to initialize is not empty."));
         }
-        
+
         // Create configuration file
         if($config_type == "json")
         {
-            Settings::SetBackEnd(new \Peg\Custom\Config\JSON);
+            Settings::SetBackEnd(new \Peg\Lib\Config\JSON);
             Settings::Load($extension_dir, "peg.json");
         }
         else
         {
-            Settings::SetBackEnd(new \Peg\Custom\Config\INI);
+            Settings::SetBackEnd(new \Peg\Lib\Config\INI);
             Settings::Load($extension_dir, "peg.conf");
         }
 

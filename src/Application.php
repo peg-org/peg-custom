@@ -7,6 +7,8 @@
 
 namespace Peg\Custom;
 
+use Peg\Lib\Settings;
+
 /**
  * Holds global options and objects.
  */
@@ -92,12 +94,12 @@ class Application
 
             if(file_exists(self::GetCwd() . "/peg.conf"))
             {
-                Settings::SetBackEnd(new Config\INI);
+                Settings::SetBackEnd(new \Peg\Lib\Config\INI);
                 Settings::Load(self::GetCwd(), "peg.conf");
             }
             else
             {
-                Settings::SetBackEnd(new Config\JSON);
+                Settings::SetBackEnd(new \Peg\Lib\Config\JSON);
                 Settings::Load(self::GetCwd(), "peg.json");
             }
         }
