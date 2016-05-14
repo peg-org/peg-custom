@@ -89,7 +89,7 @@ class Application
         if(self::ValidExtension())
         {
             self::$plugin_loader->Start(self::GetCwd() . "/plugins");
-            
+
             if(file_exists(self::GetCwd() . "/peg.conf"))
             {
                 Settings::SetBackEnd(new Config\INI);
@@ -114,7 +114,7 @@ class Application
         if(
             // Templates
             is_dir($dir . "/templates") &&
-            
+
             // Peg configuration file
             (file_exists($dir . "/peg.conf") || file_exists($dir . "/peg.json"))
         )
@@ -207,14 +207,14 @@ class Application
 
         if(!is_object(self::$symbols))
         {
-            self::$symbols = new Definitions\Symbols;
-            
-            $importer = new Definitions\Importer(
-                self::$symbols, 
+            self::$symbols = new \Peg\Lib\Definitions\Symbols;
+
+            $importer = new \Peg\Lib\Definitions\Importer(
+                self::$symbols,
                 "definitions",
-                Definitions\Type::JSON
+                \Peg\Lib\Definitions\Type::JSON
             );
-            
+
             $importer->Start();
         }
 

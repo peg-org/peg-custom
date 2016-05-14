@@ -29,7 +29,7 @@ class JSON extends \Peg\Custom\Config\Base
 
         if(file_exists($this->file))
         {
-            $this->preferences = \Peg\Custom\Utilities\Json::Decode(
+            $this->preferences = \Peg\Lib\Utilities\Json::Decode(
                 file_get_contents($this->file)
             );
         }
@@ -41,8 +41,8 @@ class JSON extends \Peg\Custom\Config\Base
     public function Write()
     {
         file_put_contents(
-            $this->file, 
-            \Peg\Custom\Utilities\Json::Encode($this->preferences)
+            $this->file,
+            \Peg\Lib\Utilities\Json::Encode($this->preferences)
         );
     }
 
