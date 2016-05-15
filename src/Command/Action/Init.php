@@ -72,6 +72,7 @@ class Init extends \Peg\Custom\CommandLine\Action
      * Takes the actions needed to generate the extension skeleton.
      * @param string $directory Path to extension
      * @param string $extension Name of the extension
+     * @param string $version A version number for the extension
      * @param string $authors Comman sperated list of authors
      * @param string $contributors Comma seperated list of contributors
      */

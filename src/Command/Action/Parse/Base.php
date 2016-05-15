@@ -9,7 +9,7 @@ namespace Peg\Custom\Command\Action\Parse;
 
 use Peg\Custom\Application;
 use Peg\Custom\CommandLine\Error;
-use Peg\Custom\Utilities\FileSystem;
+use Peg\Lib\Utilities\FileSystem;
 
 /**
  * Declares the base for a parse action that extract and generates definition
@@ -104,6 +104,7 @@ abstract class Base extends \Peg\Custom\CommandLine\Action
      * Needs to be implemented by classes extending this one in order to
      * begin the parsing process when the input format matches that of the
      * action been called.
+     * @param string $path
      */
     abstract public function Start($path);
 }
