@@ -1,20 +1,20 @@
 peg-custom
 ==========
 
-###Custom CLI frontend for the PHP Extension Generator.
+### Custom CLI frontend for the PHP Extension Generator.
 
 This is a basic cli implementation used for testing and development of the
 peg-src library. If your are planning to use peg please use
 http://github.com/peg-org/peg-cli which is the official and fully featured
 cli interface of the project.
 
-#####Installation
+##### Installation
 
 PEG uses Composer for dependencies. To start, download or clone into peg-custom.
 Open a terminal in the root of the repository and run these commands
 to install composer:
 
-```
+```sh
 curl -sS https://getcomposer.org/installer | php
 php composer.phar install
 ```
